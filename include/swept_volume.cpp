@@ -427,8 +427,8 @@ void swept_volume(const Eigen::MatrixXd & V, const Eigen::MatrixXi & F, const Ei
     offset << CV.col(0).minCoeff(), CV.col(1).minCoeff(), CV.col(2).minCoeff();
     //    GV.rowwise() += p0;
     GV.rowwise() += offset;
-    Eigen::VectorXi divs(1);
-    divs << 10;
+    Eigen::VectorXi divs(2);
+    divs << 10, 100;
     Eigen::MatrixXd U_10, U_10_dc;
     Eigen::MatrixXi G_10, G_10_dc;
     for (int dd = 0; dd<divs.size(); dd = dd + 1) {

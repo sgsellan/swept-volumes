@@ -21,25 +21,29 @@ If all goes right, you'll find the executable `swept-volumes-gui` in the main re
 
 You can begin by running `./swept-volumes-gui` with no arguments. A viewer should appear showing a bunny:
 
-![assets/viewer-1.png]()
+![](assets/viewer-1.png)
 
 You can then use W, E and R to flip between translation, rotation and scaling to move the bunny around.
 
-![assets/viewer-2.png]()
+![](assets/viewer-2.png)
 
 Press "B" to bake a keyframe in. A copy of the bunny will appear fixed in the current position, and you can move the original bunny around to select your second keyframe:
 
-![assets/viewer-3.png]()
+![](assets/viewer-3.png)
 
 Keep doing this until you are happy with the trajectory you've built:
 
-![assets/viewer-4.png]()
+![](assets/viewer-4.png)
 
 Remember to press "B" to bake the last frame. Then, press "S" to run our algorithm to compute the swept volume. Wait for a couple of seconds (up to a minute in this example) and you'll see our output (this took 25s in my MacBook):
 
-![assets/viewer-5.png]()
+![](assets/viewer-5.png)
 
-Press "V" to compare to a stamping algorithm with 10 stamps. Keep pressing "V" to see 100 stamps and 1000 stamps. If you want to go back to our output, press "C". You can now close the viewer window, all the files have been saved to `data/experiments/dd-mm-hh-mm` in `.obj` format.
+Press "V" to compare to a stamping algorithm with 10 stamps. Keep pressing "V" to see 100 stamps and 1000 stamps.
+
+![](assets/viewer-6.png)
+
+If you want to go back to our output, press "C". You can now close the viewer window, all the files have been saved to `data/experiments/dd-mm-hh-mm` in `.obj` format.
 
 Once you have tried this demo, there are many arguments you can pass to our gui, in whichever order. `-i path/to/shape.obj` will change the input shape (any libigl-readable format is accepted and there are no requirements on manifold-ness or close-ness, default is `data/bunny.obj`), `-e number` changes the edge-length of the grid used in our algorithm (lower will be slower and more precise, default is `0.02`). A sample call may be
 ```
