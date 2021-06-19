@@ -1,4 +1,0 @@
-// prints hello
-void func();
-
-
