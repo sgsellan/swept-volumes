@@ -71,9 +71,6 @@ int main(int argc, char *argv[])
             igl::read_triangle_mesh(dir_name + "strobo_100.obj",sv_100,sf_100);
             strobo_V_list.push_back(sv_100);
             strobo_F_list.push_back(sf_100);
-            igl::read_triangle_mesh(dir_name + "strobo_1000.obj",sv_1000,sf_1000);
-            strobo_V_list.push_back(sv_1000);
-            strobo_F_list.push_back(sf_1000);
             input = dir_name + "input.obj";
             argindex = argindex+2;
         }

@@ -389,6 +389,10 @@ void swept_volume(const Eigen::MatrixXd & V, const Eigen::MatrixXi & F, const Ei
     Eigen::MatrixXi Gmc;
     igl::copyleft::marching_cubes(CS,CV,CI,0.0,U,G); // our mesh
 
+
+    igl::writeOBJ(dir_name + "/input.obj",V,F);
+    write_transformation(dir_name + "/transformations.dmat",Transformations);
+    igl::writeOBJ(dir_name + "/ours.obj",U,G);
     
     
     // Strobo
@@ -440,6 +444,7 @@ void swept_volume(const Eigen::MatrixXd & V, const Eigen::MatrixXi & F, const Ei
         igl::copyleft::marching_cubes(S,GV,res(0),res(1),res(2),U_10,G_10);
         strobo_V_list.push_back(U_10);
         strobo_F_list.push_back(G_10);
+        igl::writeOBJ(dir_name + "/strobo_" + std::to_string(div) + "mc.obj",U_10,G_10);
 }
 
 }
@@ -451,3 +456,6 @@ void swept_volume(const Eigen::MatrixXd & V, const Eigen::MatrixXi & F, const st
     UVF.resize(0,0);
     swept_volume(V,F,UV,UVF,Transformations,eps,num_seeds,dir_name,U,G,strobo_V_list,strobo_F_list);
 }
+
+
+
