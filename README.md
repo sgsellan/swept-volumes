@@ -1,6 +1,10 @@
 # Swept Volumes via Spacetime Numerical Continuation
 Public code release for ["Swept Volumes via Spacetime Numerical Continuation"](http://dgp.toronto.edu/~sgsellan/pdf/swept-volumes.pdf), presented at SIGGRAPH 2021 and authored by [Silvia Sellán](http://dgp.toronto.edu/~sgsellan/), [Noam Aigerman](https://noamaig.github.io) and [Alec Jacobson](http://www.cs.toronto.edu/~jacobson/). Please note that while this implementation of our method is hereby released under MIT License, the method itself is pending a US patent filed in 2021 by Adobe Inc.
 
+# Important note
+
+An up-to-date, maintained version of this code is implemented into our new python geometry processing library [Gpytoolbox](https://gpytoolbox.org). See the swept volume documentation and examples [here](https://gpytoolbox.org/copyleft/swept_volume/).
+
 ## Installation
 
 To install this library, please start by cloning the repository recursively
